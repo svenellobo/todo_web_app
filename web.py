@@ -3,21 +3,12 @@ import functions
 
 todos = functions.get_todos()
 
-"""def clear_output():
-    if "clear" not in st.session_state:
-        st.session_state.clear = False
-
-    if st.session_state.clear:
-        st.session_state.clear = False
-        st.write("")
-    else:
-        st.write(f"You entered: {st.session_state.new_todo}")
-        st.session_state.clear = True"""
 
 def add_todo():
     todo = st.session_state["new_todo"] + "\n"
     todos.append(todo)
     functions.write_todos(todos)
+    st.session_state["new_todo"] = ""
 
 
 
