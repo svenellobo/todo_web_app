@@ -3,7 +3,7 @@ import functions
 
 todos = functions.get_todos()
 
-def clear_output():
+"""def clear_output():
     if "clear" not in st.session_state:
         st.session_state.clear = False
 
@@ -11,8 +11,8 @@ def clear_output():
         st.session_state.clear = False
         st.write("")
     else:
-        st.write(f"You entered: {st.session_state.input}")
-        st.session_state.clear = True
+        st.write(f"You entered: {st.session_state.new_todo}")
+        st.session_state.clear = True"""
 
 def add_todo():
     todo = st.session_state["new_todo"] + "\n"
@@ -21,7 +21,7 @@ def add_todo():
 
 
 
-st.title("Bok")
+st.title("ToDo Web App")
 st.subheader("This is my todo app!")
 st.write("This app is for increasing your productivity!")
 
